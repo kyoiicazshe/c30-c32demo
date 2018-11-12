@@ -15,6 +15,14 @@ for letter in read_data:
     encodedLetter += 13
     # turn back into a letter
     encodedLetter = chr(encodedLetter)
-    print(encodedLetter)
-    
+    encodedString += encodedLetter
+print(encodedString)
 
+uncodedString = ""
+ 
+for letter in encodedString:
+    uncodedLetter = ord(letter)
+    uncodedLetter -= 13
+    uncodedLetter = chr(uncodedLetter)
+    uncodedString += uncodedLetter
+print(uncodedString)
