@@ -7,6 +7,11 @@ print(read_data)
 
 # loop through letters in read_data
 for letter in read_data:
-    # print the next letter
-    print(letter)
+    encodedLetter = ord(letter)
+    # add 13 to encodedLetter
+    encodedLetter += 13
+    # turn back into a letter
+    encodedLetter = chr(encodedLetter)
+    print(encodedLetter)
+    
 
