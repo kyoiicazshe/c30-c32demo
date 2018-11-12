@@ -5,6 +5,9 @@ with open('unencoded.txt') as f:
 # print contents of read_data
 print(read_data)
 
+# make empty string
+encodedString = ""
+
 # loop through letters in read_data
 for letter in read_data:
     encodedLetter = ord(letter)
