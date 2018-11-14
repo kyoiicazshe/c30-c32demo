@@ -16,14 +16,16 @@ print(read_data)
 # make empty string
 encodedString = ""
 # set seed for random number sequence
-originalSeed = 0.25
-seed = originalSeed
+'''originalSeed = 0.25
+seed = originalSeed'''
+offset = 13	# for rot13
 
 # loop through letters in read_data
 for letter in read_data:
+    print(letter + " " + str(letter.isalpha()))
     encodedLetter = ord(letter)
-    seed = myRandom(seed)
-    offset = convertRandom(seed)
+    '''seed = myRandom(seed)
+    offset = convertRandom(seed)'''
     # add offset to encodedLetter
     encodedLetter += offset
     # turn back into a letter
@@ -31,15 +33,15 @@ for letter in read_data:
     encodedString += encodedLetter
 print(encodedString)
 
-uncodedString = ""
+'''uncodedString = ""
 
-seed = originalSeed 
+#seed = originalSeed 
 for letter in encodedString:
 
-    seed = myRandom(seed)
-    offset = convertRandom(seed)
+    #seed = myRandom(seed)
+    #offset = convertRandom(seed)
     uncodedLetter = ord(letter)
     uncodedLetter -= offset
     uncodedLetter = chr(uncodedLetter)
     uncodedString += uncodedLetter
-print(uncodedString)
+print(uncodedString)'''
