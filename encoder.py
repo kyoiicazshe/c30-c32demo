@@ -20,12 +20,12 @@ offset = 13	# for rot13
 # loop through letters in read_data
 for letter in read_data:
     if letter.isalpha():  # Only encode letters
-        encodedLetter = ord(letter)
+        encodedLetter = ord(letter) # (a -> 97)
         # add offset to encodedLetter
-        encodedLetter += offset
+        encodedLetter += offset # (97+13=110)
         # turn back into a letter
-        encodedLetter = chr(encodedLetter)
-        encodedString += encodedLetter
+        encodedLetter = chr(encodedLetter) # (110 -> n)
+        encodedString += encodedLetter #(... -> ...n)
     else:  # Keep non-letter characters as they were
         encodedString += letter
    
