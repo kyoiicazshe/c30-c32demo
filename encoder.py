@@ -9,20 +9,20 @@ def convertRandom(number):
 
 with open('unencoded.txt') as f:
     # read f and store contents in variable read_data
-    read_data = f.read()
-# print contents of read_data
-print(read_data)
+    initialString = f.read()
+# print contents of initialString
+print(initialString)
 
-# make read_data lowercase
-#read_data = read_data.lower()
-#print(read_data)
+# make initialString lowercase
+#initialString = initialString.lower()
+#print(initialString)
 
 # make empty string
 encodedString = "" #offset = 13	# for rot13
 seed = 0.1
 
-# loop through letters in read_data
-for letter in read_data:
+# loop through letters in initialString
+for letter in initialString:
     if letter.isalpha():  # Only encode letters
         encodedLetter = ord(letter) # (a -> 97)
         seed = randomNumber(seed)
