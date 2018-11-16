@@ -1,6 +1,6 @@
 # open unencoded.txt as variable f then close
 
-def myRandom(seed):
+def randomNumber(seed):
     seed = 3.9 * seed * (1 - seed)
     return (seed)
 
@@ -25,7 +25,7 @@ seed = 0.1
 for letter in read_data:
     if letter.isalpha():  # Only encode letters
         encodedLetter = ord(letter) # (a -> 97)
-        seed = myRandom(seed)
+        seed = randomNumber(seed)
         offset = convertRandom(seed)
         #encodedLetter = encodedLetter - 97
         encodedLetter -= 97
