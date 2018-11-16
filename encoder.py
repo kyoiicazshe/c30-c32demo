@@ -8,21 +8,15 @@ def convertRandom(number):
     return (int(26 * number))
 
 def encodeLetter(letter, randomOffset, alphaOffset, direction):
-    print(letter + " " + str(alphaOffset))
     encodedLetter = ord(letter) # (a -> 97)
-    print(encodedLetter)
     encodedLetter -= alphaOffset
     # add 26 so if it's negative it still turns into a number between
     # 0 and 26 (for when we subtract to decode)
     encodedLetter += 26
-    print(encodedLetter)
     # add offset to encodedLetter
     encodedLetter += (randomOffset*direction) # (97+13=110)
-    print(encodedLetter)
     encodedLetter = encodedLetter % 26
-    print(encodedLetter)
     encodedLetter += alphaOffset
-    print(encodedLetter)
     # turn back into a letter
     encodedLetter = chr(encodedLetter) # (110->n)
     return encodedLetter
@@ -52,7 +46,6 @@ print(initialString)
 
 # make initialString lowercase
 initialString = initialString.lower()
-#print(initialString)
 
 # make empty string
 seed = 0.1
