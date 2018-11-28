@@ -38,15 +38,13 @@ def encodeString(initialString, seed, direction):
             encodedString += letter
     return encodedString
 
-with open('unencoded.txt') as f:
-    # read f and store contents in variable read_data
-    initialString = f.read()
-# print contents of initialString
-print(initialString)
-
-# make initialString lowercase
-initialString = initialString.lower()
-
+inputFilename = input("File name: ")
+try:
+    with open('unencoded.txt') as f:
+       # read f and store contents in variable read_data
+       initialString = f.read()
+    print(initialString)
+    
 # make empty string
 seed = 0.1
 
@@ -58,3 +56,7 @@ seed = 0.1
 unencoded = encodeString(encoded, seed, -1)
 
 print(unencoded)
+except FileNotFoundError
+    print(inputFilename + " is not a file. ")
+    finally:
+        print("Existing program")
